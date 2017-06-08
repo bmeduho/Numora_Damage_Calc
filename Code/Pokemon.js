@@ -21,13 +21,12 @@ function FORME (types, abilities, weight, sprite, bstats) {
 	this.SpriteImg = sprite;
 	this.BaseStats = bstats;
 }
-function SPECIES (types, abilities, genders, moves, weight, sprite, bstats, forme) {
+function SPECIES (types, abilities, genders, moves, weight, bstats, forme) {
 	this.Type = types;
 	this.Ability = abilities;
 	this.Gender = genders;
 	this.moveDex = moves;
 	this.BaseWeight = weight;
-	this.SpriteImg = sprite;
 	this.BaseStats = bstats;
 	this.FormeChange = forme;
 }
@@ -67,17 +66,33 @@ var Pokemon = {
 		 "Strength","Bind","Knock Off","Snore","Bullet Seed",
 		 "Captivate","Natural Gift","Fury Cutter","Mud-Slap","String Shot",
 		 "Headbutt","Body Slam","Mimic","Defense Curl","Rage",
-		 "Mega Drain","Reflect","Bide"],
+		 "Mega Drain","Reflect","Bide"
+		],
 		6.9,
-		"http://media.pldh.net/pokexycons/001.png",
 		new BASESTATS(45,49,49,65,65,45),
 		new FORMECHANGE(false)),
 	Ivysaur: new SPECIES(
 		["Grass","Poison"],
 		["Overgrow","Chlorophyll"],
 		["Male","Female"],
+		["Tackle","Growl","Vine Whip","Poison Powder","Sleep Powder",
+		 "Take Down","Razor Leaf","Sweet Scent","Growth","Double-Edge",
+		 "Worry Seed","Synthesis","Seed Bomb","Work Up","Toxic",
+		 "Venoshock","Hidden Power","Sunny Day","Light Screen","Protect",
+		 "Safeguard","Frustration","Solar Beam","Return","Double Team",
+		 "Sludge Bomb","Facade","Rest","Attract","Round",
+		 "Echoed Voice","Energy Ball","Swords Dance","Grass Knot","Swagger",
+		 "Sleep Talk","Substitute","Nature Power","Confide""Skull Bash",
+		 "Charm","Petal Dance","Magical Leaf","Grass Whistle","Curse",
+		 "Ingrain","Nature Power","Amnesia","Leaf Storm","Power Whip",
+		 "Sludge","Endure","Giga Drain","Grassy Terrain","Grass Pledge",
+		 "Leech Seed","Flash","Rock Smash","Secret Power","Cut",
+		 "Strength","Bind","Knock Off","Snore","Bullet Seed",
+		 "Captivate","Natural Gift","Fury Cutter","Mud-Slap","String Shot",
+		 "Headbutt","Body Slam","Mimic","Defense Curl","Rage",
+		 "Mega Drain","Reflect","Bide"
+		],
 		13.0,
-		"http://media.pldh.net/pokexycons/002.png",
 		new BASESTATS(60,62,63,80,80,60),
 		new FORMECHANGE(false)),
 	Venusaur: new SPECIES(
