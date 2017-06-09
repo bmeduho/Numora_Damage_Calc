@@ -21,11 +21,16 @@ function FORME (types, abilities, weight, sprite, bstats) {
 	this.SpriteImg = sprite;
 	this.BaseStats = bstats;
 }
-function SPECIES (types, abilities, genders, moves, weight, bstats, forme) {
+function MOVE (nme, tl) {
+	this.Name = nme;
+	this.How = tl;
+}
+function SPECIES (types, abilities, genders, luMoves, leMoves, weight, bstats, forme) {
 	this.Type = types;
 	this.Ability = abilities;
 	this.Gender = genders;
-	this.moveDex = moves;
+	this.levelMoves = luMoves;
+	this.learnMoves = leMoves;
 	this.BaseWeight = weight;
 	this.BaseStats = bstats;
 	this.FormeChange = forme;
@@ -51,22 +56,33 @@ var Pokemon = {
 		["Grass","Poison"],
 		["Overgrow","Chlorophyll"],
 		["Male","Female"],
-		["Tackle","Growl","Vine Whip","Poison Powder","Sleep Powder",
-		 "Take Down","Razor Leaf","Sweet Scent","Growth","Double-Edge",
-		 "Worry Seed","Synthesis","Seed Bomb","Work Up","Toxic",
-		 "Venoshock","Hidden Power","Sunny Day","Light Screen","Protect",
-		 "Safeguard","Frustration","Solar Beam","Return","Double Team",
-		 "Sludge Bomb","Facade","Rest","Attract","Round",
-		 "Echoed Voice","Energy Ball","Swords Dance","Grass Knot","Swagger",
-		 "Sleep Talk","Substitute","Nature Power","Confide""Skull Bash",
-		 "Charm","Petal Dance","Magical Leaf","Grass Whistle","Curse",
-		 "Ingrain","Nature Power","Amnesia","Leaf Storm","Power Whip",
-		 "Sludge","Endure","Giga Drain","Grassy Terrain","Grass Pledge",
-		 "Leech Seed","Flash","Rock Smash","Secret Power","Cut",
-		 "Strength","Bind","Knock Off","Snore","Bullet Seed",
-		 "Captivate","Natural Gift","Fury Cutter","Mud-Slap","String Shot",
-		 "Headbutt","Body Slam","Mimic","Defense Curl","Rage",
-		 "Mega Drain","Reflect","Bide"
+		[new MOVE("Tackle",0),new MOVE("Growl",3),new MOVE("Vine Whip",7),
+		 new MOVE("Poison Powder",13),new MOVE("Sleep Powder",13),new MOVE("Take Down",15),
+		 new MOVE("Razor Leaf",19),new MOVE("Sweet Scent",21),new MOVE("Growth",25),
+		 new MOVE("Double-Edge",27),new MOVE("Worry Seed",31),new MOVE("Synthesis"33),
+		 new MOVE("Seed Bomb",37)],
+		[new MOVE("Work Up","Tutor"),new MOVE("Toxic","Tutor"),new MOVE("Venoshock","Tutor"),
+		 new MOVE("Hidden Power","Tutor"),new MOVE("Sunny Day","Tutor"),new MOVE("Light Screen","Tutor"),
+		 new MOVE("Protect","Tutor"),new MOVE("Safeguard","Tutor"),new MOVE("Frustration","Tutor"),
+		 new MOVE("Solar Beam","Tutor"),new MOVE("Return","Tutor"),new MOVE("Double Team","Tutor"),
+		 new MOVE("Sludge Bomb","Tutor"),new MOVE("Facade","Tutor"),new MOVE("Rest","Tutor"),
+		 new MOVE("Attract","Tutor"),new MOVE("Round","Tutor"),new MOVE("Echoed Voice","Tutor"),
+		 new MOVE("Energy Ball","Tutor"),new MOVE("Swords Dance","Tutor"),new MOVE("Grass Knot","Tutor"),
+		 new MOVE("Swagger","Tutor"),new MOVE("Sleep Talk","Tutor"),new MOVE("Substitute","Tutor"),
+		 new MOVE("Nature Power","Tutor"),new MOVE("Confide","Tutor"),new MOVE("Skull Bash","Tutor"),
+		 new MOVE("Charm","Tutor"),new MOVE("Petal Dance","Tutor"),new MOVE("Magical Leaf","Tutor"),
+		 new MOVE("Grass Whistle","Tutor"),new MOVE("Curse","Tutor"),new MOVE("Ingrain","Tutor"),
+		 new MOVE("Nature Power","Tutor"),new MOVE("Amnesia","Tutor"),new MOVE("Leaf Storm","Tutor"),
+		 new MOVE("Power Whip","Tutor"),new MOVE("Sludge","Tutor"),new MOVE("Endure","Tutor"),
+		 new MOVE("Giga Drain","Tutor"),new MOVE("Grassy Terrain","Tutor"),new MOVE("Grass Pledge","Tutor"),
+		 new MOVE("Leech Seed","Tutor"),new MOVE("Flash","Tutor"),new MOVE("Rock Smash","Tutor"),
+		 new MOVE("Secret Power","Tutor"),new MOVE("Cut","Tutor"),new MOVE("Strength","Tutor"),
+		 new MOVE("Bind","Tutor"),new MOVE("Knock Off","Tutor"),new MOVE("Snore","Tutor"),
+		 new MOVE("Bullet Seed","Tutor"),new MOVE("Captivate","Tutor"),new MOVE("Natural Gift","Tutor"),
+		 new MOVE("Fury Cutter","Tutor"),new MOVE("Mud-Slap","Tutor"),new MOVE("String Shot","Tutor"),
+		 new MOVE("Headbutt","Tutor"),new MOVE("Body Slam","Tutor"),new MOVE("Mimic","Tutor"),
+		 new MOVE("Defense Curl","Tutor"),new MOVE("Rage","Tutor"),new MOVE("Mega Drain","Tutor"),
+		 new MOVE("Reflect","Tutor"),new MOVE("Bide""Tutor")
 		],
 		6.9,
 		new BASESTATS(45,49,49,65,65,45),
