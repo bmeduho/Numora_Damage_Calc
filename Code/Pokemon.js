@@ -18,7 +18,6 @@ function FORME (types, abilities, weight, sprite, bstats) {
 	this.Type = types;
 	this.Ability = abilities;
 	this.BaseWeight = weight;
-	this.SpriteImg = sprite;
 	this.BaseStats = bstats;
 }
 function MOVE (nme, tl) {
@@ -48,7 +47,6 @@ function SPECIES (types, abilities, genders, luMoves, leMoves, weight, bstats, f
 			["Type1","Type2"],
 			"Ability",
 			weight in kg,
-			"sprite.png",
 			new BASESTATS (0,0,0,0,0,0))])),*/
 
 var Pokemon = {
@@ -116,13 +114,11 @@ var Pokemon = {
 		["Overgrow","Chlorophyll"],
 		["Male","Female"],
 		100.0,
-		"http://media.pldh.net/pokexycons/003.png",
 		new BASESTATS(80,82,83,100,100,80),
 		new FORMECHANGE(true,["Mega",new FORME(
 			["Grass","Poison"],
 			["Thick Fat"],
 			155.5,
-			"http://media.pldh.net/pokexycons/003-mega.png",
 			new BASESTATS(80,100,123,122,120,80))])),
 	Charmander: new SPECIES(
 		["Fire"],
